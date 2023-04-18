@@ -29,12 +29,14 @@ function buttonClick(event) {
   const obotao = event.target;
   if (vez == 'x') {
     obotao.classList.add('optionx');
-    vez = 'o';
     adicionar(obotao.id);
+    verificarVitoria();
+    vez = 'o';
   } else if (vez == 'o') {
     obotao.classList.add('optiono');
-    vez = 'x';
     adicionar(obotao.id);
+    verificarVitoria()
+    vez = 'x';
   }
 }
 
@@ -44,6 +46,23 @@ function adicionar(any) {
 }
 
 function verificarVitoria(){
- 
+
+console.log("locaisX:" + locaisx);
+console.log("locaisO:" + locaisy);
+  for (let i = 0; i < possibilidadesVitoria.length; i++) {
+    const [a, b, c] = possibilidadesVitoria[i];
+    if (locaisx.includes(a) && locaisx.includes(b) && locaisx.includes(c)) {
+      console.log("o jogador X venceu");
+      return;
+    } else if (locaisy.includes(a) && locaisy.includes(b) && locaisy.includes(c)) {
+      console.log("o jogador O venceu");
+      return;
+    }
+  }
+
+}
+
+
+function finalizarJogo(){
   
 }
