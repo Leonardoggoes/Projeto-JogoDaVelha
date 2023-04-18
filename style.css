@@ -1,0 +1,70 @@
+html{
+  height: 100%;
+  width: 100%;
+  background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(63,236,255,1) 24%, rgba(50,61,66,1) 71%);
+}
+
+
+
+
+.areajogo{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+display: grid;
+grid-template: 97px 97px 97px / 97px 97px 97px;
+padding: 5px;
+background-color: black;
+height: 300px;
+width: 300px;
+justify-content: space-around;
+align-content: space-around;
+box-shadow:0px 0px 30px 10px rgb(24, 23, 23);
+}
+
+.option{
+  border: none;
+  border-radius: 15px;
+  background: lightgrey;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+}
+
+
+
+.option:hover{
+  cursor: pointer;
+  background: rgb(177, 177, 177);
+  
+}
+
+.flip-vertical-right {
+	animation: flip-vertical-right 0.5s ease-out both;
+}
+
+
+.optionx {
+  background-image: url('./option-x.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.optiono {
+  background-image: url('./option-o.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+
+@keyframes flip-vertical-right {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+
