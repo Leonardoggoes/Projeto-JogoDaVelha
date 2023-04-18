@@ -39,21 +39,20 @@ box-shadow:0px 0px 30px 10px rgb(24, 23, 23);
   
 }
 
-.flip-vertical-right {
-	animation: flip-vertical-right 0.5s ease-out both;
-}
-
-
 .optionx {
   background-image: url('./option-x.svg');
   background-repeat: no-repeat;
   background-position: center center;
+  pointer-events: none;
+  animation: flip-vertical-right 0.5s ease-out both;
 }
 
 .optiono {
   background-image: url('./option-o.svg');
   background-repeat: no-repeat;
   background-position: center center;
+  pointer-events: none;
+  animation: flip-vertical-right 0.5s ease-out both;
 }
 
 
