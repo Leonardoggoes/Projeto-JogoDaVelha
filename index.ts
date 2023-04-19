@@ -1,6 +1,7 @@
 // Import stylesheets
 import './style.css';
 import './style-winner.css';
+import './style-button.css';
 
 const possibilidadesVitoria = [
   // linhas
@@ -16,6 +17,9 @@ const possibilidadesVitoria = [
   [3, 5, 7],
 ];
 
+const modalWinner = document.getElementById('modal-winner');
+let winner = document.getElementById('winner');
+const fecharWinner = document.querySelector('.fechar-winner');
 const myButtons = document.querySelectorAll('.option');
 let vez = 'x';
 let locaisx = [];
@@ -53,7 +57,7 @@ function verificarVitoria() {
   for (let i = 0; i < possibilidadesVitoria.length; i++) {
     const [a, b, c] = possibilidadesVitoria[i];
     if (locaisx.includes(a) && locaisx.includes(b) && locaisx.includes(c)) {
-      console.log('o jogador X venceu');
+      winner.textContent = "X";
       finalizarJogo();
       return;
     } else if (
@@ -61,7 +65,7 @@ function verificarVitoria() {
       locaisy.includes(b) &&
       locaisy.includes(c)
     ) {
-      console.log('o jogador O venceu');
+      winner.textContent = "O";
       finalizarJogo();
       return;
     }
@@ -71,4 +75,12 @@ function verificarVitoria() {
 function finalizarJogo() {
   const tabuleiro = document.querySelector('.areajogo');
   tabuleiro.classList.add('finalizarjogo');
+  modalWinner.style.display = 'block';
 }
+
+fecharWinner.addEventListener('click', reiniciarJogo);
+
+function reiniciarJogo(){
+  location.reload();
+}
+
