@@ -1,10 +1,12 @@
 .modal-winner{
+  display: flex;
   position: absolute;
   margin: 0;
   padding: 0;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  
 }
 
 .card {
@@ -25,6 +27,17 @@
   z-index: 1;
   color: white;
   font-size: 2em;
+}
+
+.card h3 {
+  position: absolute;
+  margin: 0;
+  padding: 0%;
+  z-index: 1;
+  color: white;
+  font-size: 2em;
+  top: 50%;
+  left: 50%;
 }
 
 .card::before {
