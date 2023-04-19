@@ -1,5 +1,6 @@
 // Import stylesheets
 import './style.css';
+import './style-winner.css';
 
 const possibilidadesVitoria = [
   // linhas
@@ -70,5 +71,4 @@ function verificarVitoria() {
 function finalizarJogo() {
   const tabuleiro = document.querySelector('.areajogo');
   tabuleiro.classList.add('finalizarjogo');
-
 }
