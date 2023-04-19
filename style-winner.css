@@ -97,3 +97,28 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 768px){
+  
+  .card{
+    width: 300px;
+    height: 400px;
+  }  
+  
+  .card h2 {
+    margin-bottom: 250px;
+    z-index: 1;
+    color: white;
+    font-size: 1.8em;
+  }
+  
+  .card h3 { 
+    position: absolute;
+    margin: 0;
+    padding: 0%;
+    z-index: 1;
+    color: white;
+    font-size: 6em;
+  }
+
+}

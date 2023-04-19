@@ -73,3 +73,13 @@ div div button:active {
   -moz-transition: box-shadow 0.2s ease-in;
   transition: box-shadow 0.2s ease-in;
 }
+
+
+@media (max-width: 768px){
+  
+  div div button {
+    top: 88%;
+    left: 53%;
+  }
+
+}
